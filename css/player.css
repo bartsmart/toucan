@@ -1,0 +1,249 @@
+body {
+    overflow:hidden;
+    background-size: 100%;
+    margin: 0; 
+    padding: 0;
+}
+body.default {
+	background: white url(../images/intro.png) no-repeat !important;
+    background-size: 100% !important;
+}
+.movie-cover-big {
+    width: 200px;
+    height: 300px;
+    margin: 200px auto 0 auto;
+}
+.toucan-title-big, .toucan-subtitle-big {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0 auto 0 auto;
+    width: 600px;
+    text-align: center;
+    z-index: 99999;
+    padding-bottom: 200px;
+    text-overflow: ellipsis;
+  	white-space: nowrap;
+  	overflow: hidden;
+}
+.toucan-title-big {
+	height: 100px;
+	margin-top: 0;
+}
+.toucan-subtitle-big {
+	color: grey;
+	padding-bottom: 0;
+}
+#logo {
+    width: 400px;
+    height: 83px;
+    background: url(../images/toucanlogo.png) no-repeat;
+    margin: 330px auto 0 auto;
+    background-size: 100%;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
+}
+@-moz-keyframes spin {
+  from {-moz-transform: rotate(0deg);}
+  to   {-moz-transform: rotate(359deg);}
+}
+@-o-keyframes spin {
+  from {-o-transform: rotate(0deg);}
+  to   {-o-transform: rotate(359deg);}
+}
+@keyframes spin{
+  from {transform: rotate(0deg);}
+  to   {transform: rotate(359deg);}
+}
+#loading-small {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left : -15px;
+    z-index: 99999;
+    -webkit-animation: spin 2.5s infinite linear;
+     -moz-animation: spin 2.5s infinite linear;
+       -o-animation: spin 2.5s infinite linear;
+          animation: spin 2.5s infinite linear;
+}
+#loading-small img {
+	width: 20px;
+	height: 20px;
+}
+.toucan-video-controls {
+    visibility: hidden;
+}
+#media {
+    width: 100%;
+}
+#loading {
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin: 0 auto -15px auto;
+}
+#intro {
+    width: 100%;
+    height: 100%;
+}
+#pause, #play, #buffer {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: url(../images/pause.png) no-repeat;
+    background-size: 100% !important;
+    width: 100px;
+    height: 130px;
+    top: 280px;
+    left: 50%;
+    margin-left: -50px;
+}
+#buffer {
+    background: url(../images/buffering.png) no-repeat;
+    height: 100px;
+    -webkit-animation: spin 2.5s infinite linear;
+     -moz-animation: spin 2.5s infinite linear;
+       -o-animation: spin 2.5s infinite linear;
+          animation: spin 2.5s infinite linear;
+}
+#play {
+    background: url(../images/play.png) no-repeat;
+}
+/* base styles */
+.toucan-video-timer {
+	cursor: default;
+}
+.toucan-video-controls {
+    float: left;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 170px;
+}
+.movie-cover {
+    float: left;
+}
+.movie-cover img {
+    padding: 20px 20px 20px 50px;
+}
+.controls-wrapper {
+    float: left;
+}
+.toucan-title {
+	padding-top: 40px;
+    margin-bottom: 17px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    width: 900px;
+    text-overflow: ellipsis;
+  	white-space: nowrap;
+  	overflow: hidden;
+}
+/* Start of toucan default theme */
+.toucan-video-player.toucan {
+	float: left;
+    width:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px; 
+	background: #000000;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #313131),color-stop(1, #000000)); 
+	background-image: -moz-linear-gradient(top, #313131, #000000); 
+	background-image: linear-gradient(#313131, #000000);
+	box-shadow: inset 0 15px 35px #535353;
+}
+.toucan-video-player.toucan .toucan-video-play, .toucan-video-player.toucan .toucan-video-seek, .toucan-video-timer, .toucan-video-timer-final {
+    float: left;
+}
+/* play, pause */
+.toucan-video-player.toucan .toucan-video-play {
+	display: none;
+	opacity: 0.7;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out;
+}
+.toucan-video-player.toucan video {
+	float: left;
+}
+.toucan-video-player.toucan .toucan-video-play:hover {
+    opacity: 1;
+}
+/* seek */
+.toucan-video-player.toucan .toucan-video-seek {
+	position:relative;
+	width: 880px;
+	height: 10px;
+	margin-top: 5px;
+	background: #6a6a6a;
+}
+.video-seek-wrapper {
+    float: left;
+    padding: 10px 20px 8px 20px;
+    height: 25px;
+    color: white;
+    background-color: #000000;
+}
+.toucan-video-player.toucan .toucan-video-seek .ui-slider-handle.ui-state-hover {
+	background: #fff;
+}
+.toucan-video-player.toucan .toucan-video-seek .ui-slider-range {
+	background: #e5db00;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e5db00),color-stop(1, #e5db00));
+	background-image: -moz-linear-gradient(top, #e5db00, #e5db00);
+	background-image: linear-gradient(#e5db00, #e5db00);
+	box-shadow: inset 0 -3px 3px #e5db00;
+}
+/* timer */
+.toucan-video-player.toucan .toucan-video-timer,
+.toucan-video-player.toucan .toucan-video-timer-final {
+	margin-right: 10px;
+    margin-top: 3px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+.toucan-video-player.toucan .toucan-video-timer-final {
+    margin-left: 10px; 
+    margin-right: 0;
+}
+.toucan-video-seek {
+    background-color: black;
+}
+/* needed jquery ui styles
+ * using these, we don't depend on jQuery UI's stylsheet
+ */
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	margin-left:-0.6em;
+	cursor: default;
+	outline: none;
+}
+.ui-slider-range {
+	display:block;
+	width:100%;
+	height:100%;
+	left:0;
+	bottom: 0;
+	border:0 none;
+	position:absolute;
+	z-index:1;
+}
